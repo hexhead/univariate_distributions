@@ -1,5 +1,5 @@
 # geometric_function_tests.R - Bill White - 2/14/19
-
+  
 library(ggplot2)
 
 source("geometric_function.R")

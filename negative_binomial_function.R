@@ -11,8 +11,5 @@ amstat_negative_binomial <- function(k, r, p) {
                p = as.factor(p),
                grp = paste(as.factor(r), as.factor(p)))
   })
-  return_results <- do.call(rbind, results)
-  print(return_results)
-  #cat("negative binomial mean (params: k =", k, "= p * r / 1 - p", (p * r) / (1 - p), "\n")
-  return_results
+  do.call(rbind, results)
 }

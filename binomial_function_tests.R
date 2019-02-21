@@ -3,7 +3,6 @@
 
 library(ggplot2)
 
-rm(list = ls())
 source("binomial_function.R")
 
 # k is the number of observed successes (support)

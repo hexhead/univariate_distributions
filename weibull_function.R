@@ -11,18 +11,18 @@
 # alphas - scale - numeric vector greater tha zero
 # betas - shape - numeric vector greater tha zero
 # http://mathworld.wolfram.com/WeibullDistribution.html
-amstat_discrete_weibull <- function(x_values, alphas = 1, betas = 0,
-                                    mu = 0) {
+amstat_discrete_weibull <- function(x_values, alphas = 1, betas = 0, mu = 0) {
   x_results <- lapply(x_values, function(x) {
     a_results <- lapply(alphas, function(a) {
       b_results <- lapply(betas, function(b) {
         f_x_alpha_beta <- 
-          a * b ^ -a * 
+          (a * b ^ -a * 
           (x - mu) ^ (a - 1) * 
-          exp(-(((x - mu) / b) ^ a))
+          exp(-(((x - mu) / b) ^ a))) /
+          b
         data.frame(x = x,
                    y = f_x_alpha_beta,
-                   Parameters = paste("a =", a, ", b = ", b))
+                   Parameters = paste("a =", a, ", b = ", b, "u =", mu))
       })
       do.call(rbind, b_results)
     })

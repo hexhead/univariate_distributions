@@ -10,14 +10,15 @@ library(ggplot2)
 
 source("weibull_function.R")
 
-x_s <- seq(from = 0, to = 5, by = 0.1)
-a_s <- c(0.5, 2, 4)
-b_s <- c(1, 2, 4)
+a_s <- c(3)
+b_s <- c(2)
+u_s <- c(-1.5, 1, 2)
+x_s <- seq(from = max(u_s), to = 6, by = 0.1)
 plot_data <- amstat_discrete_weibull(x_values = x_s, 
                                      alphas = a_s, 
                                      betas = b_s, 
-                                     mu = 0)
-head(plot_data)
+                                     mu = u_s)
+head(plot_data, n = 10)
 plot_obj <- ggplot(plot_data, aes(x = x, y = y, colour = Parameters)) + 
   geom_point() + geom_line() + xlab("x") + ylab("PMF") +
   ggtitle(label = "Discrete Weibull Distribution", 

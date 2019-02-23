@@ -31,6 +31,8 @@ amstat_discrete_weibull_first <- function(x_values, alphas = 1, betas = 0, mu = 
 }
 
 # http://mathworld.wolfram.com/WeibullDistribution.html
+# represents a Weibull distribution with shape parameter α, scale 
+# parameter β, and location parameter μ.
 amstat_discrete_weibull_wolfram <- function(x_values, 
                                             alphas = 1, 
                                             betas = 0, 

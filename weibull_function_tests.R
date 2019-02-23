@@ -1,11 +1,15 @@
 # weibull_function_tests.R - Bill White - 2/22/19
+
 # https://www.wikiwand.com/en/Discrete_Weibull_distribution
 # x_values - numeric vector of x vaklues to evalute
 # alphas - scale - numeric vector greater tha zero
 # betas - shape - numeric vector greater tha zero
 # mu - location - numeric value
-# https://reference.wolfram.com/language/ref/WeibullDistribution.html
 # u - locations  - numeric vector
+# 
+# https://reference.wolfram.com/language/ref/WeibullDistribution.html
+# represents a Weibull distribution with shape parameter α, scale 
+# parameter β, and location parameter μ.
 library(ggplot2)
 
 source("weibull_function.R")

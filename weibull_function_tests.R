@@ -16,7 +16,7 @@ b_s <- c(1, 2)
 # any real numbers
 # u_s <- c(-1.5, 1, 2)
 u_s <- c(0)
-x_s <- seq(from = u_s[1], to = 6, by = 0.1)
+x_s <- seq(from = u_s[1] + 1, to = 6, by = 0.1)
 plot_data <- amstat_discrete_weibull_wolfram(x_values = x_s, 
                                              alphas = a_s, 
                                              betas = b_s, 

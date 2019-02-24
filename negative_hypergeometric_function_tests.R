@@ -10,20 +10,20 @@ library(ggplot2)
 
 source("negative_hypergeometric_function.R")
 
+# ------------------------------------------------------------------
 # N_s = 54 cards (#elements), 
 # K_s = 13 hearts (#success elements), 
 # r_s = 3 draws (#failures to stop)
 # k_s = evaluate from 1 to 10 draws
-
+# ------------------------------------------------------------------
 # N_s <- c(54)
 # K_s <- c(13)
 # r_s <- c(10)
-k_s <- seq(from = 0, to = N_s - K_s, by = 1)
-
 N_s <- c(54)
 K_s <- c(13)
-r_s <- c(10)
+r_s <- c(10, 20, 30, 40)
 k_s <- seq(from = 0, to = N_s - K_s, by = 1)
+# ------------------------------------------------------------------
 raw_results <- amstat_negative_hypergeometric(ks = k_s, 
                                               Ns = N_s, 
                                               Ks = K_s, 

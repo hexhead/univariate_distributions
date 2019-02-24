@@ -17,7 +17,7 @@ plot_lists <- lapply(seq_len(length(alphas)), function(param_idx) {
 series_labels <- c(paste('params', seq_len(length(alphas)), sep = ""))
 series_colors <- rainbow(length(alphas))
 series_pchs <- rep(16, length(alphas))
-series_types <- rep('l', length(alphas))
+series_types <- rep('b', length(alphas))
 
 x_vals <- seq_along(plot_lists[[1]])
 plot(x_vals, plot_lists[[1]], 

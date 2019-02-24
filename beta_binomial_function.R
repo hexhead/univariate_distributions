@@ -7,8 +7,11 @@ amstat_beta_binomial_wiki <- function(k, n, a, b) {
   choose(n, k) * amstat_beta(a + k, n - k + b) / amstat_beta(a, b)
 }
 
+# implemented in terms of the beta distribution, and by using the 
+# properties of the beta function, we can write the function in 
+# terms of gamma functions
 amstat_beta_binomial <- function(x, n, a, b) {
-  gamma_method = "builtin"
+  gamma_method = "lanczos"
   fx_num <- 
     amstat_gamma(x + a, method = gamma_method) * 
     amstat_gamma(n - x + b, method = gamma_method) * 

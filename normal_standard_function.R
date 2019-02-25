@@ -1,5 +1,10 @@
 # normal_standard_function.R - Bill White - 2/25/19
 # 
+# The simplest case of a normal distribution is known as the standard 
+# normal distribution. This is a special case when mu = 0 and sigma = 1
+# https://www.wikiwand.com/en/Normal_distribution
+# https://www.wikiwand.com/en/Normal_distribution#/Standard_normal_distribution
+#
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)
 

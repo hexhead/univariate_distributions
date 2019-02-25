@@ -13,7 +13,7 @@ amstat_normal_gaussian <- function(x_s, m_s, v_s) {
         y <- (1 / sqrt(2 * pi * v_s[i]) * exp(-1 / 2 * ((x - m_s[i]) ^ 2)))
         data.frame(x = x, 
                    y = y, 
-                   Parameters = paste("mu", m_s[i], " sd=", v_s[i]))
+                   Parameters = paste("mu", m_s[i], " sd^2=", v_s[i]))
       })         
       do.call(rbind, m_v_results)
   })

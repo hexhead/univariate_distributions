@@ -14,7 +14,6 @@ source("normal_gaussian_function.R")
 x_s <- seq(from = -5, to = 5, by = 0.1)
 m_s <- c(0, 0, 0, -2)
 v_s <- c(0.2, 1.0, 5.0, 0.5)
-s_s <- sqrt(v_s)
 raw_results <- amstat_normal_gaussian(x_s = x_s, m_s = m_s, v_s = v_s)
 head(raw_results)
 plot_obj <- ggplot(raw_results, aes(x = x, 

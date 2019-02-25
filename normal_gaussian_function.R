@@ -10,7 +10,8 @@
 amstat_normal_gaussian <- function(x_s, m_s, v_s) {
   x_results <- lapply(x_s, function(x) {
     m_v_results <- lapply(seq_along(m_s), function(i) {
-        y <- (1 / sqrt(2 * pi * v_s[i]) * exp(-1 / 2 * ((x - m_s[i]) ^ 2)))
+        y <- (1 / sqrt((2 * pi * v_s[i]))) * 
+          (exp(-((x - m_s[i]) ^ 2) / (2 * v_s[i])))
         data.frame(x = x, 
                    y = y, 
                    Parameters = paste("mu", m_s[i], " sd^2=", v_s[i]))

@@ -11,7 +11,7 @@ library(ggplot2)
 
 source("cauchy_standard_function.R")
 
-x_s <- seq(from = -5, to = 5, by = 0.1)
+x_s <- seq(from = -5, to = 5, by = 0.05)
 x0_s <- c(0, 0, 0, -2)
 gamma_s <- c(0.5, 1, 2, 1)
 raw_results <- amstat_cauchy_standard(x_s = x_s, 

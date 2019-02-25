@@ -2,7 +2,7 @@
 
 library(ggplot2)
 
-source("normal_function.R")
+source("normal_gaussian_function.R")
 
 x_s <- seq(from = -4, to = 4, by = 0.1)
 m_s <- c(0, -1, 1)

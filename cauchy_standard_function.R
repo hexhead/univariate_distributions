@@ -6,6 +6,10 @@
 # x_s - vector of numerics to evaluate (x values)
 # x0_s = vector of numeric
 # gamma_s - vector of numeric gamma
+# 
+# is also known, especially among physicists, as the Lorentz distribution 
+# (after Hendrik Lorentz), Cauchy–Lorentz distribution, Lorentz(ian) 
+# function, or Breit–Wigner distribution.
 amstat_cauchy_standard <- function(x_s, x0_s, gamma_s) {
   x_results <- lapply(x_s, function(x) {
     x0_gamma_results <- lapply(1:length(x0_s), function(i) {

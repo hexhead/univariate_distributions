@@ -19,7 +19,7 @@ head(raw_results)
 plot_obj <- ggplot(raw_results, aes(x = x, 
                                     y = y, 
                                     colour = Parameters)) + 
-  geom_point() + geom_line() + 
+  geom_line() + 
   xlab("x") + ylab("PMF") + ylim(0, 0.5) +
   ggtitle(label = "Chi Squared Distribution", 
           subtitle = "Probability Mass Function") +

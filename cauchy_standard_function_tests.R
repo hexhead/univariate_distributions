@@ -21,7 +21,7 @@ head(raw_results)
 plot_obj <- ggplot(raw_results, aes(x = x, y = y, colour = Parameters)) + 
   geom_point() + geom_line() + 
   xlab("x") + ylab("PMF") + ylim(0, max(raw_results$y)) +
-  ggtitle(label = "Cauchy (standard) Distribution, mean = 0, stddev = 1", 
+  ggtitle(label = "Cauchy (standard) Distribution", 
           subtitle = "Probability Mass Function") +
   scale_fill_discrete(name = "Parameters")
 print(plot_obj)

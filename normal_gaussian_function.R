@@ -1,4 +1,4 @@
-# normal_gaussian_function.R - Bill White - 2/25/19
+# normal_gaussian_function.R - Bill White - 2/26/19
 # 
 # https://www.wikiwand.com/en/Normal_distribution
 # Parameters:

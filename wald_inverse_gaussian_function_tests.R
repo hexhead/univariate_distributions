@@ -1,11 +1,18 @@
 # wald_inverse_gaussian_function_tests.R - Bill White - 2/25/19
 # 
-# https://www.wikiwand.com/en/Normal_distribution
+# https://www.wikiwand.com/en/Inverse_Gaussian_distribution
+# * describes the distribution of the time a Brownian motion with positive 
+#   drift takes to reach a fixed positive level
+# * the inverse Gaussian distribution (also known as the Wald distribution)
+# * x > 0, where \mu >0 is the mean and \lambda >0 is the shape parameter
+# * As λ tends to infinity, the inverse Gaussian distribution becomes more 
+#   like a normal (Gaussian) distribution
+# * a two-parameter exponential family with natural parameters −λ/(2μ2) 
+# limiting form of a sample in a sequential probability ratio test
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)
-# m_s - vector of numerics for the averages (mu's)
-# s_s - vector of numerics for standard deviations
-# v_s - vector of numerics for  variances
+# m_s - vector of numerics mu mean
+# l_s - vector of numerics lambda shape
 
 library(ggplot2)
 

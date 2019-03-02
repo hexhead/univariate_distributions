@@ -18,10 +18,10 @@ amstat_power_series <- function(x_s, c_s, a_s) {
     x_results <- lapply(x_s, function(x) {
       a_results <- lapply(a_s, function(a) {
         A_c <- Ac(c = c, x_s = x_s, a_s = a_s)
-        print(sprintf("x = %f, A(c) = %f", x, A_c))
-        print(paste("a_s[x]=", a_s[x], ", c=", c, "x_s[x]=", x_s[x]))
+        # print(sprintf("x = %f, A(c) = %f", x, A_c))
+        # print(paste("a_s[x]=", a_s[x], ", c=", c, "x_s[x]=", x_s[x]))
         y <- (a_s[x] * (c ^ x_s[x])) / A_c
-        print(sprintf("x = %f, A(c) = %f, y = %f", x, A_c, y))
+        # print(sprintf("x = %f, A(c) = %f, y = %f", x, A_c, y))
         data.frame(x = x, y = y, Parameters = sprintf("c=%4.2f", c))
       })
       do.call(rbind, a_results)

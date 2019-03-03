@@ -1,5 +1,11 @@
 # beta_binomial_function.R - Bill White - 2/5/19
 
+# Examp[e paramters
+# n <- 10
+# k <- seq(from = 0, to = n)
+# alphas <- c(0.2, 0.7, 2, 60)
+# betas <- c(0.25, 2, 2, 40)
+
 source("beta_function.R")
 source("gamma_function.R")
 

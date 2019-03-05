@@ -4,8 +4,8 @@
 #
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)
-# m_s = vector of numeric means (location)
-# b_s - vector of numeric parameter b > 0 scale
+# a_s = vector of numeric alpha shape
+# b_s - vector of numeric beta scale
 
 library(ggplot2)
 

@@ -1,6 +1,6 @@
 # laplace_function_tests.R - Bill White - 2/26/19
 # 
-# https://www.wikiwand.com/en/Lapalce_distribution
+# https://www.wikiwand.com/en/Laplace_distribution
 #
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)

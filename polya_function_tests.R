@@ -14,9 +14,9 @@ library(ggplot2)
 source("polya_function.R")
 
 n <- 6
-n_s <- seq(from = 1, to = n, by = 1)
-p_s <- c(0.1, 0.25, 0.5, 0.9)
-g_s <- c(3, 3, 3, 3)
+n_s <- c(5, 10, 15, 20)
+p_s <- c(0.05, 0.1, 0.25, 0.5)
+g_s <- rep(0.1, length(p_s))
 raw_results <- amstat_polya(n_s = n_s, p_s = p_s, g_s = g_s)
 head(raw_results)
 plot_obj <- ggplot(raw_results, aes(x = x, y = y, colour = Parameters)) + 
@@ -27,3 +27,19 @@ plot_obj <- ggplot(raw_results, aes(x = x, y = y, colour = Parameters)) +
   scale_fill_discrete(name = "Parameters") +
   facet_wrap(~grp)
 print(plot_obj)
+
+# -----------------------------------------------------------------------------
+# https://www.vosesoftware.com/riskwiki/Polyadistribution.php
+x_s <- seq(from = 0, to = 30, by = 1)
+a_s <- c(0.5, 1.5, 6.6)
+b_s <- c(22, 10, 2.5)
+raw_results_vose <- vose_polya(x_s = x_s, a_s = a_s, b_s = b_s)
+head(raw_results_vose)
+plot_obj_vose <- ggplot(raw_results_vose, aes(x = x, y = y, 
+                                              colour = Parameters)) + 
+  geom_point() + geom_line() +
+  xlab("k") + ylab("PMF") +
+  ggtitle(label = "Vose Polya Distribution", 
+          subtitle = "Probability Mass Function") +
+  scale_fill_discrete(name = "Parameters")
+print(plot_obj_vose)

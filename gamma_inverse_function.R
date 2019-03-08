@@ -1,6 +1,8 @@
 # gamma_inverse_function.R - Bill White - 3/5/19
 # 
 # https://www.wikiwand.com/en/Inverse-gamma_distribution
+# 
+# Pearson type V distribution is an inverse-gamma distribution
 #
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)

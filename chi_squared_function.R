@@ -1,6 +1,9 @@
 # chi_squared_function.R - Bill White - 2/26/19
 # 
 # https://www.wikiwand.com/en/Chi-squared_distribution
+# 
+# Pearson type III distribution is a generalized gamma distribution 
+# or chi-squared distribution
 #   
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)

@@ -6,6 +6,8 @@
 # arises frequently as the null distribution of a test statistic, most notably 
 # in the analysis of variance (ANOVA), e.g., F-test
 # 
+# Pearson type VI distribution is a beta prime distribution or F-distribution
+# 
 # Parameters:
 # x_s - vector of numerics to evaluate (x values) - real > 0
 # d1_s = vector of numeric degrees of freedom positive integers (floats ok)

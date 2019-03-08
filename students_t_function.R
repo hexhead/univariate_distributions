@@ -1,7 +1,14 @@
 # students_t_function.R - Bill White - 2/26/19
 # 
 # https://www.wikiwand.com/en/Student%27s_t-distribution
-#   
+# 
+# Pearson Type II Curve is used in computing the table of significant 
+# correlation coefficients for Spearman's rank correlation coefficient 
+# when the number of items in a series is less than 100 (or 30, 
+# depending on some sources). After that, the distribution mimics a 
+# standard Student's t-distribution. For the table of values, certain 
+# values are used as the constants in the previous equation
+# 
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)
 # v_s - vector of numerics degrees of freedom

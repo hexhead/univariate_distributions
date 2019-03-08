@@ -24,7 +24,6 @@ amstat_pearson_type_iv <- function(x_s, a_s, m_s, v_s, l_s) {
     m_results <-  lapply(m_s, function(m) {
       v_results <- lapply(v_s, function(v) {
         a_results <- lapply(a_s, function(a) {
-          one_half <- 1 / 2
           # normalizing constant nc
           nc1 <- (amstat_gamma(z = m + ((v / 2) * 0 + 1i), method = "stirling") / 
                     amstat_gamma(z = m, method = "stirling")) ^ 2
@@ -36,7 +35,7 @@ amstat_pearson_type_iv <- function(x_s, a_s, m_s, v_s, l_s) {
             parameters <- sprintf("alpha=%2.0f m=%2.0f v=%2.0f lambda=%2.0f", 
                                   a, m, v, l)
             xla <- (x - l) / a
-            t1 <- 1 + (xla ^ -m)
+            t1 <- (1 + (xla  ^ 2)) ^ -m
             t2 <- exp(-v * atan(xla))
             y <-  nc * t1 * t2
             data.frame(x = x, y = y, Parameters = parameters)

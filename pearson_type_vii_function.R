@@ -48,3 +48,17 @@ amstat_pearson_type_vii <- function(x_s, l_s = c(0), s_s = c(1), g2_s = c(0.1)) 
   })
   do.call(rbind, x_results)
 }
+
+# https://www.statisticshowto.datasciencecentral.com/pearson-distribution/
+# Support: (-∞ < x < ∞)
+amstat_pearson_type_vii_howto <- function(x_s, m_s) {
+  x_results <- lapply(x_s, function(x) {
+    m_results <- lapply(m_s, function(m) {
+      y <-  (1 + x ^ 2) ^ -m
+      data.frame(x = x, y = y, Parameters = sprintf("m=%4.2f", m))
+    })         
+    do.call(rbind, m_results)
+  })
+  do.call(rbind, x_results)
+}
+

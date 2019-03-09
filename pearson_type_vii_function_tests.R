@@ -21,6 +21,7 @@ library(ggplot2)
 
 source("pearson_type_vii_function.R")
 
+# -----------------------------------------------------------------------------
 x_s <- seq(from = -8, to = 8, by = 0.1)
 l_s <- c(0)
 s_s <- c(1, 2, 3)
@@ -33,7 +34,24 @@ plot_obj <- ggplot(raw_results, aes(x = x,
                                     y = y, 
                                     colour = Parameters)) + 
   geom_line() +   xlab("x") + ylab("PDF") + 
-  ggtitle(label = "Pearson Type VII", subtitle = "Probability Density Function") +
+  ggtitle(label = "Pearson Type VII - Wikipedia", 
+          subtitle = "Probability Density Function") +
   scale_fill_discrete(name = "Parameters") + 
   geom_vline(xintercept = l_s, lty = 2)
+print(plot_obj)
+
+# -----------------------------------------------------------------------------
+x_s <- seq(from = -8, to = 8, by = 0.1)
+m_s <- c(1, 2, 3)
+raw_results <- amstat_pearson_type_vii_howto(x_s = x_s, m_s = m_s)
+head(raw_results)
+# NOTE: ylim(0, 0.5) used below to match Wikipedia plot, 
+# so we get get some ggplot warnings; increase ylim's second value
+plot_obj <- ggplot(raw_results, aes(x = x, 
+                                    y = y, 
+                                    colour = Parameters)) + 
+  geom_line() +   xlab("x") + ylab("PDF") + 
+  ggtitle(label = "Pearson Type VII - Stats How To", 
+          subtitle = "Probability Density Function") +
+  scale_fill_discrete(name = "Parameters")
 print(plot_obj)

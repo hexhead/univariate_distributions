@@ -1,5 +1,11 @@
 # gamma_incomplete_function_tests.R - Bill White - 03/09/19
 #
+#https://www.boost.org/doc/libs/1_35_0/libs/math/doc/sf_and_dist/
+#html/math_toolkit/special/sf_gamma/igamma.html
+# 
+# http://mathworld.wolfram.com/RegularizedGammaFunction.html
+# http://mathworld.wolfram.com/IncompleteGammaFunction.html
+# 
 # Parameters:
 # x_s - vector of numerics x-axis values  x = [0, inf) 
 # n_s - vector of numerics - integer scale

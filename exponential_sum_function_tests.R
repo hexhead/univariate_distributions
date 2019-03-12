@@ -4,7 +4,7 @@
 
 # Parameters:
 # x_s - vector of numerics x-axis values - x = [-inf, inf]
-# n_s - vector of numerics - integer
+# n - integer
 # 
 # NOTE: missing rows warning is expected due to y-axis limits
 
@@ -14,7 +14,10 @@ source("exponential_sum_function.R")
 
 x_s <- seq(from = -4, to = 1, by = 0.1)
 n_s <- 1:5
-raw_results <- amstat_exponential_sum(x_s = x_s, n_s = n_s)
+plot_list <- lapply(n_s, function(n) {
+  amstat_exponential_sum(x_s = x_s, n = n)  
+})
+raw_results <- do.call(rbind, plot_list)
 head(raw_results)
 plot_obj <- ggplot(raw_results, aes(x = x, y = y, colour = Parameters)) + 
   geom_line() +

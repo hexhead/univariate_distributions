@@ -12,10 +12,14 @@ library(ggplot2)
 
 source("exponential_sum_function.R")
 
-x_s <- seq(from = -4, to = 1, by = 0.1)
 n_s <- 1:5
+x_s <- seq(from = -4, to = 1, by = 0.1)
 plot_list <- lapply(n_s, function(n) {
-  amstat_exponential_sum(x_s = x_s, n = n)  
+  x_results <- lapply(x_s, function(x) {
+    y <- amstat_exponential_sum(n = n, x = x)
+    data.frame(x = x, y = y, Parameters = sprintf("%2.0f", n))
+  })
+  do.call(rbind, x_results)
 })
 raw_results <- do.call(rbind, plot_list)
 head(raw_results)

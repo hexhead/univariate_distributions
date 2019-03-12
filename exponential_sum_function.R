@@ -3,8 +3,8 @@
 # http://mathworld.wolfram.com/ExponentialSumFunction.html
 
 # Parameters:
-# x_s - vector of numerics x-axis values - x = [-inf, inf]
-# n -integer
+# n -integer - 
+# x  numeric - x-axis values
 # 
 # https://www.wikiwand.com/en/Exponential_sum
 # 
@@ -18,13 +18,10 @@
 # 
 # summed over a finite sequence of real numbers x_{n}.
 
-amstat_exponential_sum <- function(x_s, n) {
-  x_results <- lapply(x_s, function(x) {
+amstat_exponential_sum <- function(n, x) {
     k_results <- lapply(0:n, function(k) {
       (x ^ k) / factorial(k)
     })
     y <- sum(unlist(k_results))
-    data.frame(x = x, y = y, Parameters = sprintf("%2.0f", n))
-  })
-  do.call(rbind, x_results)
+    y
 }

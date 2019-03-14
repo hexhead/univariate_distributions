@@ -1,7 +1,8 @@
 # exponential_function.R - Bill White - 2/25/19
 # 
 # https://www.wikiwand.com/en/Exponential_distribution
-#
+# Alternative parameterization
+# 
 # describes the time between events in a Poisson point process, i.e., 
 # a process in which events occur continuously and independently at a 
 # constant average rate

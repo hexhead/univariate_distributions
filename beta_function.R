@@ -11,6 +11,7 @@
 source("gamma_function.R")
 
 # ----------------------------------------------------------------------------
+# https://www.wikiwand.com/en/Beta_function
 amstat_beta <- function(a, b) {
   (amstat_gamma(a) * amstat_gamma(b)) / amstat_gamma(a + b)
 }

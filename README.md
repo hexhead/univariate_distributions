@@ -7,4 +7,4 @@ In statistics, a univariate distribution is a probability distribution of only o
 
 https://www.wikiwand.com/en/Univariate_(statistics)
 
-https://reference.wolfram.com/language/tutorial/DiscreteDistributions.html
+https://reference.wolfram.com/language/guide/ParametricStatisticalDistributions.html

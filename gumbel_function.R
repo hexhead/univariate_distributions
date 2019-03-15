@@ -13,8 +13,8 @@
 #
 # Parameters:
 # x_s - vector of numerics to evaluate (x values)
-# m_s - vector of numerics - mu - location (real)
 # b_s - vector of numerics - beta - scale (pos real)
+# m_s - vector of numerics - mu - location (real)
 amstat_gumbel <- function(x_s, m_s, b_s) {
   x_results <- lapply(x_s, function(x) {
     m_results <- lapply(seq_along(m_s), function(i) {

@@ -1,4 +1,4 @@
-# rayleigh_function.R - Bill White - 3/16/19
+# rayleigh_function.R - Bill White - 3/15/19
 # 
 # https://www.wikiwand.com/en/Rayleigh_distribution
 # 

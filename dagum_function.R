@@ -2,6 +2,10 @@
 # 
 # https://www.wikiwand.com/en/Dagum_distribution
 # 
+# * Dagum distribution can be derived as a special case of the Generalized 
+#   Beta II (GB2) distribution (a generalization of the Beta prime distribution)
+# * often used to model income and wealth distribution
+# 
 # Parameters: 
 # x_s - vector of numerics to evaluate (x values) > 0
 # a_s - vector of numerics - a - shape > 0

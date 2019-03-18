@@ -10,7 +10,7 @@
 # x_s - vector of numerics to evaluate (x values)
 # l_s - vector of numerics - location - real
 # s_s - vector of numerics - scale > 0
-amstat_logistic <- function(x_s, l_s, s_s) {
+amstat_logistic <- function(x_s, l_s = (0), s_s = c(1)) {
   x_results <- lapply(x_s, function(x) {
     ls_results <- lapply(1:length(l_s), function(i) {
       l <- l_s[i]

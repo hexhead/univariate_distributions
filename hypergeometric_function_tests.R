@@ -17,8 +17,12 @@ N_s <- rep.int(x = 500, length(n_s))
 raw_results <- amstat_hypergeometric(k = k_s, N = N_s, K = K_s, n = n_s)
 plot_data <- do.call(rbind, raw_results)
 head(plot_data)
-plot_obj <- ggplot(plot_data, aes(x = x, y = y, colour = Parameters)) + 
-  geom_point() + geom_line() + xlab("k") + ylab("PMF") +
+plot_obj <- ggplot(plot_data, aes(x = x, y = y, 
+                                  shape = Parameters)) +
+  geom_point(aes(colour = Parameters), size = 3) + 
+  geom_point(colour = "grey90", size = 1) + 
+  geom_line(aes(colour = Parameters)) +
+  xlab("k") + ylab("PMF") +
   ggtitle(label = "Hypergeometric Distribution", 
           subtitle = "Probability Mass Function") +
   scale_fill_discrete(name = "Parameters")

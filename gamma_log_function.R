@@ -26,10 +26,6 @@
 
 source("gamma_function.R")
 
-# Parameters:
-# x_s - vector of numerics to evaluate (x values) (-inf, inf)
-# a_s - vector of numerics - a - alpha
-# b_s - vector of numerics - b - beta
 amstat_gamma_log <- function(x_s, a_s, b_s, m_s) {
   x_results <- lapply(x_s, function(x) {
     a_results <- lapply(a_s, function(a) {
